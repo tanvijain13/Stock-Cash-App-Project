@@ -10,7 +10,7 @@
 ##### The SearchView allows the user to filter the displayed stock data by entering search queries. When the user enters a search query, the onQueryTextChange method of the SearchView's OnQueryTextListener is called, which filters the stock data based on the query and updates the RecyclerView to display the filtered results. If no matching results are found, a toast message is displayed to the user.
 ### The architectural approach you took and why
 ##### **The first task was to setup the MainActivity with the basic UI architecture with a SearchView**
-##### **Next I thought to try and fetch the respnse from the given API and show it to the MainActivity without any filtered UI. **
+##### **Next I thought to try and fetch the respnse from the given API and show it to the MainActivity without any filtered UI.**
 
 #### API service setup to fetch stock data
 #####  The `StocksApiService` class is used to define the HTTP requests and process the response. The `StockAdapter` class uses the` StocksApiService` to fetch stock data and update the UI with the retrieved data.
@@ -23,7 +23,7 @@
 .build()
 val service: StocksApiService = retrofit.create(StocksApiService::class.java)`
 
-##### **The next target was to show the fetched stock data in the UI in a `CardView` format and `RecyclerView` **
+##### **The next target was to show the fetched stock data in the UI in a `CardView` format and `RecyclerView`**
 ##### 2. `StockAdapter` class uses the `StocksApiService` to fetch stock data and update the UI with the retrieved data. It extends the `RecyclerView.Adapter` class and is responsible for displaying a list of `Stock` objects in a RecyclerView.
 ###### - `ViewHolder` class is defined to represent a single item view in the RecyclerView, with references to each view in the item layout.
 ###### - `onCreateViewHolder()` method is called when a new ViewHolder is created for a new item view in the RecyclerView. It inflates the item layout and returns a new instance of the `ViewHolder` class.
@@ -33,7 +33,9 @@ val service: StocksApiService = retrofit.create(StocksApiService::class.java)`
 
 ###### - `filteredList` variable holds a filtered list of Stock objects and filterList() method updates the adapter's filteredList with a new list of stocks, and notifies the adapter that the data has changed.
 
-##### **Once the UI looked clean I changed and added a couple of funtionalities in the SearchView to search and bring up the name of the stock that is being searched**
+##### **Once the UI looked clean I changed and added a couple of functionalities in the SearchView to search and bring up the name of the stock that is being searched**
+
+##### **I also checked for the malformed and empty JSON responses and how to deal with it by adding a try-catch block to handle any exceptions that may occur while fetching data from the API. If an exception is caught, an error message is logged to the console and null is returned if it is Malformed.**
 
 ##### **Lastly when everything looked good, I added a splash screen to the code before it lands on the MainActivity**
 

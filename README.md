@@ -10,7 +10,7 @@
 ##### The SearchView allows the user to filter the displayed stock data by entering search queries. When the user enters a search query, the onQueryTextChange method of the SearchView's OnQueryTextListener is called, which filters the stock data based on the query and updates the RecyclerView to display the filtered results. If no matching results are found, a toast message is displayed to the user.
 ### The architectural approach you took and why
 ##### **The first task was to setup the MainActivity with the basic UI architecture with a SearchView**
-##### **Next I thought to try and fetch the respnse from the given API and show it to the MainActivity without any filtered UI.**
+##### **Next I thought to try and fetch the response from the given API and show it to the MainActivity without any filtered UI.**
 
 #### API service setup to fetch stock data
 #####  The `StocksApiService` class is used to define the HTTP requests and process the response. The `StockAdapter` class uses the` StocksApiService` to fetch stock data and update the UI with the retrieved data.

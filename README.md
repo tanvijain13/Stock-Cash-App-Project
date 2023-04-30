@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Stock Cash Android Application
 ##### The Stock Cash App is a simple and user-friendly mobile application for displaying and searching for stocks data interface for accessing and searching for stock data. It uses MVVM architectural pattern which ensures that the app is easy to maintain and scale, and its integration with the Retrofit library to fetch the stock data from a remote API allows for efficient and reliable API calls. The app then displays it to the user in a RecyclerView, which can be filtered by search queries entered by the user.
 
@@ -20,7 +19,19 @@
 .addConverterFactory(GsonConverterFactory.create())
 .build()
 val service: StocksApiService = retrofit.create(StocksApiService::class.java)`
-##### 2.
-=======
 
->>>>>>> bb588b1e294b38d86f64aa3670d8bdc0e8b83d08
+##### 2. `StockAdapter` class uses the `StocksApiService` to fetch stock data and update the UI with the retrieved data. It extends the `RecyclerView.Adapter` class and is responsible for displaying a list of `Stock` objects in a RecyclerView.
+###### - `ViewHolder` class is defined to represent a single item view in the RecyclerView, with references to each view in the item layout.
+###### - `onCreateViewHolder()` method is called when a new ViewHolder is created for a new item view in the RecyclerView. It inflates the item layout and returns a new instance of the `ViewHolder` class.
+###### - `onBindViewHolder()` method is called by the RecyclerView when it needs to update the contents of a ViewHolder. It gets the corresponding `Stock` object and binds its data to the views in the ViewHolder.
+
+###### - `getItemCount()` method returns the total number of items in the dataset held by the adapter.
+
+###### - `filteredList` variable holds a filtered list of Stock objects and filterList() method updates the adapter's filteredList with a new list of stocks, and notifies the adapter that the data has changed.
+
+#### MVVM architecture in the app
+##### 1. Model : This represents the data and business logic of the app, in this case, the data models for the stocks `Stock` and `StockData` and the API service, `StocksApiService` that provides the data.
+##### 2. View: This is the UI layer of the app, in this case, the activities and fragments that display the data to the user. In this app it is `MainActivity`.
+##### 3. `MainViewModel` class is part of the ViewModel layer of the MVVM architecture in the app and extends the `ViewModel` class and communicates with the `StocksApiService` class to get the portfolio data from the server. The `getPortfolioData()` function is a suspend function that uses the Retrofit library to make an asynchronous network call to get the portfolio data.
+
+##### The `GsonBuilder()` method is used to create a Gson instance with lenient parsing, which allows for a relaxed JSON syntax. The `awaitResponse()` method is used to wait for the response from the server, and the response body is returned if it is successful. If there is an exception or error during the API call, the `catch` block logs the error message.

@@ -1,7 +1,7 @@
 ## Stock Cash Android Application
 
 ![Stock Cash App](https://heytanvi.com/wp-content/uploads/2023/04/Screenshot_20230430-015304_Stocks-Cash-App_samsung-galaxys20ultra-cosmicblack-portrait.png "Stock Cash App") | ![Stock Cash App main page](https://heytanvi.com/wp-content/uploads/2023/04/Screenshot_20230430-112710_Stocks-Cash-App_samsung-galaxys20ultra-cosmicblack-portrait.png "Stock Cash App main page")
-:---:
+:---:|:---:
 *Stock Cash App*
 
 

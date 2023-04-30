@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Stock Cash Android Application
 ##### The Stock Cash App is a simple and user-friendly mobile application for displaying and searching for stocks data interface for accessing and searching for stock data. It uses MVVM architectural pattern which ensures that the app is easy to maintain and scale, and its integration with the Retrofit library to fetch the stock data from a remote API allows for efficient and reliable API calls. The app then displays it to the user in a RecyclerView, which can be filtered by search queries entered by the user.
 
@@ -19,4 +20,7 @@
 .addConverterFactory(GsonConverterFactory.create())
 .build()
 val service: StocksApiService = retrofit.create(StocksApiService::class.java)`
-##### 2. 
+##### 2.
+=======
+
+>>>>>>> bb588b1e294b38d86f64aa3670d8bdc0e8b83d08

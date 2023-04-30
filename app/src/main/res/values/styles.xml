@@ -5,4 +5,5 @@
         <item name="queryBackground">@drawable/search_view_bg_rounded</item>
     </style>
 
+
 </resources>

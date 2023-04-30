@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="cash_app_green_color">#00D632</color>
+    <color name="grey">#E8E8E8</color>
 </resources>

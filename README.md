@@ -1,4 +1,6 @@
 ## Stock Cash Android Application
+
+![Stock Cash App ](https://heytanvi.com/wp-content/uploads/2023/04/Screenshot_20230430-015304_Stocks-Cash-App_samsung-galaxys20ultra-cosmicblack-portrait.png "Stock Cash App ")
 ##### The Stock Cash App is a simple and user-friendly mobile application for displaying and searching for stocks data interface for accessing and searching for stock data. It uses MVVM architectural pattern which ensures that the app is easy to maintain and scale, and its integration with the Retrofit library to fetch the stock data from a remote API allows for efficient and reliable API calls. The app then displays it to the user in a RecyclerView, which can be filtered by search queries entered by the user.
 
 ##### The app uses the Model-View-ViewModel (MVVM) architectural pattern, which separates the presentation layer (View) from the business logic (ViewModel) and the data model (Model) of the application.

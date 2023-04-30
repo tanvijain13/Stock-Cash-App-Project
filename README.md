@@ -60,7 +60,7 @@ val service: StocksApiService = retrofit.create(StocksApiService::class.java)`
 ### How to run this project
 #####  Here are some general instructions on how to run this in Android Studio:
 
-###### 1. Clone this repository
+######  1. Clone this repository
 ###### 2. Open Android Studio and select "Open an existing Android Studio project" from the main menu.
 ###### 3. Navigate to the directory where the project is stored and select the project folder.
 ###### 4. Wait for Android Studio to load and build the project.

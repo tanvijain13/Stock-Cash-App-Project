@@ -32,6 +32,8 @@ class MainActivity : AppCompatActivity() {
     private var adapter: StockAdapter?=null
     private var stocksList = ArrayList<Stock>()
 
+    private var toast: Toast? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -91,13 +93,18 @@ class MainActivity : AppCompatActivity() {
                 //Scrolling to the matching position if a matching item is found
                 if (matchingPosition != -1) {
                     stockRecyclerView.scrollToPosition(matchingPosition)
+                    toast?.cancel() // Cancelling the toast if it is already displayed
                 } else {
                     //Displaying a toast message if no matching item is found
-                    Toast.makeText(this@MainActivity, "No matching item found", Toast.LENGTH_SHORT).show()
+                    if (newText?.isNotBlank() == true) { // Check if the search query is not blank
+                        toast?.cancel() // Cancelling the toast if it is already displayed
+                        toast = Toast.makeText(this@MainActivity, getString(R.string.toast_text), Toast.LENGTH_SHORT)
+                        toast?.show()
+                    }
                 }
 
                 //Filtering the adapter's data list based on the search query
-                adapter?.filterList(stocksList)
+                adapter?.filterList(filteredList)
                 return true
             }
         })

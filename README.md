@@ -48,6 +48,7 @@ val service: StocksApiService = retrofit.create(StocksApiService::class.java)`
 
 ##### **I also checked for the malformed and empty JSON responses and how to deal with it by adding a try-catch block to handle any exceptions that may occur while fetching data from the API. If an exception is caught, an error message is logged to the console and null is returned if it is Malformed.**
 
+#### MainViewModelTest
 ##### **Next, I worked on the unit test MainViewModelTest.** This is a unit test class for the MainViewModel in the StocksCashApp application. It uses the MockK library to mock the StocksApiService, which is used by the view model to retrieve stock data. The test method, getPortfolioData returns correct data, tests the getPortfolioData() function of the MainViewModel. The test creates a StockData object with three Stock objects, representing the stocks that are expected to be returned by the API. It then mocks the API call using MockK and sets it up to return the expected StockData object. The test then calls the getPortfolioData() function of the view model and checks if the returned data matches the expected data using the assertEquals() method.
 
 ##### Overall, this test verifies that the getPortfolioData() function of the MainViewModel retrieves and returns the correct data from the StocksApiService.

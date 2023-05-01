@@ -14,6 +14,11 @@
 ##### The MainActivity class sets up the UI components, including the RecyclerView for displaying the stock data and the SearchView for filtering the data. It also creates instances of the Retrofit library and the MainViewModel class. The MainViewModel class handles the API calls and data processing, and updates the UI by passing the data to the MainActivity class.
 
 ##### The SearchView allows the user to filter the displayed stock data by entering search queries. When the user enters a search query, the onQueryTextChange method of the SearchView's OnQueryTextListener is called, which filters the stock data based on the query and updates the RecyclerView to display the filtered results. If no matching results are found, a toast message is displayed to the user.
+
+#### App feature:
+##### 1. Dark/light mode based on device setting
+##### 2. Search stock functionality
+
 ### The architectural approach you took and why
 ##### **The first task was to setup the MainActivity with the basic UI architecture with a SearchView**
 ##### **Next I thought to try and fetch the response from the given API and show it to the MainActivity without any filtered UI.**
@@ -42,6 +47,10 @@ val service: StocksApiService = retrofit.create(StocksApiService::class.java)`
 ##### **Once the UI looked clean I changed and added a couple of functionalities in the SearchView to search and bring up the name of the stock that is being searched**
 
 ##### **I also checked for the malformed and empty JSON responses and how to deal with it by adding a try-catch block to handle any exceptions that may occur while fetching data from the API. If an exception is caught, an error message is logged to the console and null is returned if it is Malformed.**
+
+##### **Next, I worked on the unit test MainViewModelTest.** This is a unit test class for the MainViewModel in the StocksCashApp application. It uses the MockK library to mock the StocksApiService, which is used by the view model to retrieve stock data. The test method, getPortfolioData returns correct data, tests the getPortfolioData() function of the MainViewModel. The test creates a StockData object with three Stock objects, representing the stocks that are expected to be returned by the API. It then mocks the API call using MockK and sets it up to return the expected StockData object. The test then calls the getPortfolioData() function of the view model and checks if the returned data matches the expected data using the assertEquals() method.
+
+##### Overall, this test verifies that the getPortfolioData() function of the MainViewModel retrieves and returns the correct data from the StocksApiService.
 
 ##### **Lastly when everything looked good, I added a splash screen to the code before it lands on the MainActivity**
 

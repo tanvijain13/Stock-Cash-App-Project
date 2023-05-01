@@ -36,13 +36,13 @@ val service: StocksApiService = retrofit.create(StocksApiService::class.java)`
 
 ##### **The next target was to show the fetched stock data in the UI in a `CardView` format and `RecyclerView`**
 ##### 2. `StockAdapter` class uses the `StocksApiService` to fetch stock data and update the UI with the retrieved data. It extends the `RecyclerView.Adapter` class and is responsible for displaying a list of `Stock` objects in a RecyclerView.
-###### - `ViewHolder` class is defined to represent a single item view in the RecyclerView, with references to each view in the item layout.
-###### - `onCreateViewHolder()` method is called when a new ViewHolder is created for a new item view in the RecyclerView. It inflates the item layout and returns a new instance of the `ViewHolder` class.
-###### - `onBindViewHolder()` method is called by the RecyclerView when it needs to update the contents of a ViewHolder. It gets the corresponding `Stock` object and binds its data to the views in the ViewHolder.
+- `ViewHolder` class is defined to represent a single item view in the RecyclerView, with references to each view in the item layout.
+- `onCreateViewHolder()` method is called when a new ViewHolder is created for a new item view in the RecyclerView. It inflates the item layout and returns a new instance of the `ViewHolder` class.
+- `onBindViewHolder()` method is called by the RecyclerView when it needs to update the contents of a ViewHolder. It gets the corresponding `Stock` object and binds its data to the views in the ViewHolder.
 
-###### - `getItemCount()` method returns the total number of items in the dataset held by the adapter.
+- `getItemCount()` method returns the total number of items in the dataset held by the adapter.
 
-###### - `filteredList` variable holds a filtered list of Stock objects and filterList() method updates the adapter's filteredList with a new list of stocks, and notifies the adapter that the data has changed.
+- `filteredList` variable holds a filtered list of Stock objects and filterList() method updates the adapter's filteredList with a new list of stocks, and notifies the adapter that the data has changed.
 
 ##### **Once the UI looked clean I changed and added a couple of functionalities in the SearchView to search and bring up the name of the stock that is being searched**
 
@@ -70,11 +70,11 @@ val service: StocksApiService = retrofit.create(StocksApiService::class.java)`
 ### How to run this project
 #####  Here are some general instructions on how to run this in Android Studio:
 
-######  1. Clone this repository
-###### 2. Open Android Studio and select "Open an existing Android Studio project" from the main menu.
-###### 3. Navigate to the directory where the project is stored and select the project folder.
-###### 4. Wait for Android Studio to load and build the project.
-###### 5. Connect an Android device to your computer or start an emulator.
-###### 6. Click the "Run" button in the toolbar or go to "Run" > "Run app" from the main menu.
-###### 7. Select the device or emulator you want to run the app on and click "OK".
-###### 8. Wait for the app to install and launch on the selected device or emulator.
+1. Clone this repository
+2. Open Android Studio and select "Open an existing Android Studio project" from the main menu.
+3. Navigate to the directory where the project is stored and select the project folder.
+4. Wait for Android Studio to load and build the project.
+5. Connect an Android device to your computer or start an emulator.
+6. Click the "Run" button in the toolbar or go to "Run" > "Run app" from the main menu.
+7. Select the device or emulator you want to run the app on and click "OK".
+8. Wait for the app to install and launch on the selected device or emulator.
